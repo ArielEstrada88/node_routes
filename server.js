@@ -1,6 +1,19 @@
+require("dotenv").config();
+
+console.log("MONGO_URI:", process.env.MONGO_URI);
+
+
 const express = require("express");
+const connectDB = require("./db/connect");
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+//     |   Connects to MongoDB
+//     V
+connectDB();
 
 app.use("/", require("./routes"));
 
