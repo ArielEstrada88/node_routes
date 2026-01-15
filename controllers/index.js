@@ -1,3 +1,16 @@
+// This is a MAP that tells EXPRESS
+// "Okay, if anyone hits (/auth/home),
+//  use this function to handle it."
+
+//Routes that exist here /home,
+// /protected, /register...
+// all of these point to a function
+// in my authController.js(file)
+
+// S i m p l y___P u t:
+// "In this file im the "Manager" telling people
+// where to go."
+
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
@@ -7,7 +20,7 @@ const awesomeFunction = (req, res, next) => {
 
 const tooeleTechFunction = (Req, res, next) => {
   res.json("Tooele Tech is Awesome!");
-  console.log(res);
+  // console.log(res);
 };
 
 //GET All students
